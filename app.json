@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "v0.1",
-    "slug": "v0.1",
+    "name": "praktykiAppNov7",
+    "slug": "praktykiapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,6 +21,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": ""
   }
 }
