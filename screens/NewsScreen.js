@@ -39,8 +39,7 @@ const NewsScreen = ({ navigation }) => {
   return news === undefined ? (
     <LoadingScreen />
   ) : (
-    <ScrollView>
-      <View style={{ marginTop: StatusBar.currentHeight }} />
+    <>
       <FlatList
         ItemSeparatorComponent={() => <Separator />}
         refreshControl={
@@ -51,6 +50,7 @@ const NewsScreen = ({ navigation }) => {
             dateB = new Date(b.date.length === 13 ? +b.date : b.date);
           return dateB - dateA;
         })}
+        style={{paddingTop: StatusBar.currentHeight}}
         renderItem={({ item }) => (
           <TouchableHighlight
             onPress={() => navigation.navigate("NewsDetails", item)}
@@ -68,8 +68,7 @@ const NewsScreen = ({ navigation }) => {
         )}
         keyExtractor={(item) => item._id.toString()}
       />
-      <View style={{ marginBottom: 5 }} />
-    </ScrollView>
+    </>
   );
 };
 
